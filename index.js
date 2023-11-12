@@ -1,0 +1,1 @@
+// Set the links on the navigation up so that when you click one the display status is turned on and the rest are turned off.

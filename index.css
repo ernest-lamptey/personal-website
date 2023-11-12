@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #222222;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+main {
+    height: 70vh;
+    width: 50vw;
+    border-radius: 1rem;
+    /* overflow: scroll; */
+    padding: 1rem;
+    backdrop-filter: blur(1px);
+    position: relative;
+}
+
+main::before,
+main::after {
+    content: "";
+    position: absolute;
+    inset: 0.5px;
+    border: darkgray solid 2px;
+    /* background:linear-gradient(140deg, steelblue, firebrick); */
+    border-radius: inherit;
+    z-index: -1;
+}
+
+main::before {
+    filter: blur(7px);
+}
+
+section {
+    padding: 12.5% 1rem;
+    height: 100%;
+    /* background-color: gray; */
+}
+
+nav {
+    background-color: rgba(33, 33, 33, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(33, 33, 33, 0.7);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+a:hover {
+    background-color: yellow;
+    color: #222222;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    background: url(./img/nnnoise.svg), linear-gradient(140deg, steelblue, firebrick);
+    height: 100vh;
+    width: 100vw;
+    mix-blend-mode: overlay;
+    filter: blur(0.2px);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.display-photo {
+    width: 60px;
+    border-radius: 50%;
+}
+
+li {
+    list-style-type: none;
+}
+
+li img {
+    width: 48px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}

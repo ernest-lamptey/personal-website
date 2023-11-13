@@ -115,7 +115,9 @@ a:hover {
 }
 
 .tech-stack {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
     
 }
 
@@ -124,7 +126,10 @@ li {
 }
 
 li img {
-    width: 48px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.4rem;
+    width: 60px;
 }
 
 .title {

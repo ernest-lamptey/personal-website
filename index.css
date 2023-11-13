@@ -31,7 +31,8 @@ main::-webkit-scrollbar {
 }
 
 section {
-    padding: 2rem;
+    padding: 2.4rem;
+    margin: 2rem;
     min-height: 300px;
     width: 90vw;
     max-width: 700px;
@@ -45,7 +46,9 @@ section::after {
     content: "";
     position: absolute;
     inset: 0.5px;
-    border: darkturquoise solid 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(140deg, steelblue, firebrick) 1;
     /* background:linear-gradient(140deg, steelblue, firebrick); */
     border-radius: inherit;
     z-index: -1;
@@ -86,9 +89,13 @@ a {
 
 a:hover {
     /* background-color: darkturquoise; */
-    color: darkturquoise;
+    /* background: linear-gradient(140deg, rgba(70, 131, 180, 0.25), rgba(178, 34, 34, 0.25)); */
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image: linear-gradient(140deg, steelblue, firebrick) 1;
+
     cursor: pointer;
-    border-bottom: darkturquoise solid 2px;
+    /* border-bottom: darkturquoise solid 2px; */
 }
 
 .overlay {

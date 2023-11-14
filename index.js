@@ -1,4 +1,3 @@
-// Set the links on the navigation up so that when you click one the display status is turned on and the rest are turned off.
 
 const home = document.querySelector("#intro-link");
 const works = document.querySelector("#works-link");
@@ -8,7 +7,12 @@ const turnOnDislay = (link, arr) => {
     arr.forEach(elem => {
         const elemSection = document.getElementById(elem.href.split("#")[1])
         if(link === elem) {
-            elemSection.style.display = "block";
+            if (link === works) {
+                elemSection.style.display = "flex"
+                elemSection.style.gap = "1rem"
+            } else {
+                elemSection.style.display = "block";
+            }
         } else {
             elemSection.style.display = "none"
         }
@@ -22,3 +26,7 @@ links.forEach(link => {
         turnOnDislay(e.target, links);
     })
 })
+
+//TODOs
+//for the works section, when you hover, push all the tech icons to right side and display a list of projects on the left side. 
+//Then when a project name is clicked on, a short description should show below the name and only the relevant tech stack show in the side bar on the right
